@@ -445,14 +445,3 @@ button {
 .contact__title {
   margin: 32px 0;
 }
-
-.contact__links {
-  font-size: var(--font-large);
-  margin: 24px 0;
-}
-
-.contact__links i:hover {
-  transform: scale(1.1);
-  color: var(--color-yellow);
-  transition: all var(--animation-duration) ease-in;
-}

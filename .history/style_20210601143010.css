@@ -102,14 +102,6 @@ button {
   background-color: purple;
   align-items: center;
   padding: 16px;
-  position: fixed;
-  width: 100%;
-  transition: all var(--animation-duration) ease-in-out;
-}
-
-#navbar.navbar--dark {
-  background-color: rgb(109, 46, 109);
-  padding: 8px;
 }
 
 .navbar__menu {
@@ -158,10 +150,14 @@ button {
   display: none;
 }
 
+.scrollNav {
+  color: black;
+}
+
 /* Home */
 #home {
   background: url("imgs/background\ Img.png") center/cover no-repeat;
-  padding: 150px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -496,7 +492,6 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    transition: 0.4s;
   }
   .navbar__menu {
     flex-direction: column;

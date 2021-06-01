@@ -101,6 +101,7 @@ button {
   justify-content: space-between;
   background-color: purple;
   align-items: center;
+  color: var(--color-white);
   padding: 16px;
 }
 
@@ -115,30 +116,17 @@ button {
   color: var(--color-white);
 }
 
-.navbar__menu__item.active {
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item--active {
   border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
   background-color: var(--color-dard-purple);
-  border-radius: var(--size-border-radius);
-}
-
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-  color: white;
-}
-
-.navbar__logo img {
-  height: 100px;
-  width: 100px;
-}
-
-.navbar__logo a {
-  position: relative;
-  bottom: 35px;
 }
 
 .navbar__toggle-btn {
@@ -146,8 +134,6 @@ button {
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
-  top: 24px;
-  display: none;
 }
 
 /* Home */
@@ -210,13 +196,13 @@ button {
   color: var(--color-blue);
 }
 
-.major__icon i {
-  transition: all var(--animation-duration) ease;
-}
-
 .major__icon:hover i {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
 }
 
 /* 
@@ -374,7 +360,6 @@ button {
 .project__img {
   max-width: 100%;
   max-height: 100%;
-  align-self: center;
 }
 
 .project__description {
@@ -388,8 +373,6 @@ button {
   justify-content: center;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
-  transform: translateY(10px);
-  background-color: black;
 }
 
 .project:hover .project__description {
@@ -403,10 +386,10 @@ button {
 
 .project__description h3:after {
   content: "";
-  display: block;
-  position: relative;
   width: 25px;
   height: 25px;
+  display: block;
+  position: relative;
   left: 50%;
   margin-left: -12px;
   background-color: var(--color-dark-white);
@@ -482,38 +465,4 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
-    display: block;
-  }
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar__menu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-
-  .about__majors {
-    flex-direction: column;
-  }
-
-  .major {
-    margin-bottom: 38px;
-  }
-
-  .skillset {
-    flex-direction: column;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-
-  .testimonail__avatar {
-    width: 80px;
-    height: 80px;
-  }
 }

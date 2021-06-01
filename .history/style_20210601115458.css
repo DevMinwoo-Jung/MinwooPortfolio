@@ -403,10 +403,10 @@ button {
 
 .project__description h3:after {
   content: "";
-  display: block;
-  position: relative;
   width: 25px;
   height: 25px;
+  display: block;
+  position: relative;
   left: 50%;
   margin-left: -12px;
   background-color: var(--color-dark-white);

@@ -33,10 +33,18 @@
   /* Animation Duration */
   --animation-duration: 300ms;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+#aboveHome,
+#aboveSkills {
+  visibility: hidden;
 }
 
 /* Typography */
@@ -104,7 +112,6 @@ button {
   position: fixed;
   width: 100%;
   transition: all var(--animation-duration) ease-in-out;
-  z-index: 1;
 }
 
 #navbar.navbar--dark {

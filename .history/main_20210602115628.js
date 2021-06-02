@@ -24,7 +24,7 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  if(link == null){
+  if(link === null){
     return;
   }
   scollIntoView(link);
@@ -33,7 +33,12 @@ navbarMenu.addEventListener('click', (event) => {
 
 // handle scroll when click contact
 const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', () => {
+contactMe.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if(link === null){
+    return;
+  }
   scollIntoView('#contact');
 });
 

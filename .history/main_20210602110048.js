@@ -19,25 +19,8 @@ document.addEventListener('scroll', () => {
 
 
 // handle scroll when click navbar menu
-// navbar가 메뉴 가림 추후 해결 해야함 2021.06.02
 const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener('click', (event) => {
-  const target = event.target;
-  const link = target.dataset.link;
-  if(link == null){
-    return;
-  }
-  scollIntoView(link);
-});
 
-
-// handle scroll when click contact
-const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', () => {
-  scollIntoView('#contact');
-});
-
-function scollIntoView(selector){
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth'});
-}
+document.addEventListener('click', (event) => {
+  console.log(event.target.dataset.link);
+})

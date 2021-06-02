@@ -165,9 +165,11 @@ button {
   text-align: center;
 }
 
-.home__fadeOut {
+.home__fadeOut .h1,
+.h2,
+.button {
   opacity: 0.5;
-  transition: all calc(var(--animation-duration)) ease-in-out;
+  transition: all calc(var(--animation-duration) * 10) ease-in-out;
 }
 
 .home__avatar {

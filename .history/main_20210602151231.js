@@ -41,7 +41,7 @@ contactMe.addEventListener('click', () => {
 
 
 // home contents is faded out when scroll down
-const homeContents = document.querySelector('.home__container');
+const homeContents = document.querySelector('#home');
 const homeHeight = homeContents.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   homeContents.style.opacity = 1 - window.scrollY / homeHeight;

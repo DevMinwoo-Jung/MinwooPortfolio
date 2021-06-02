@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
   if(window.scrollY > navbar){
     navbar.classList.add('navbar--dark');
   } else {
-    document.getElementById('navbar').style.backgroundColor = 'purple'
+    document.getElementById('navbar').style.backgroundColor = "yellow";
     navbar.classList.remove('navbar--dark');
   }
 });
@@ -37,18 +37,17 @@ contactMe.addEventListener('click', () => {
   scollIntoView('#contact');
 });
 
-
-
-
-// home contents is faded out when scroll down
-const homeContents = document.querySelector('.home__container');
-const homeHeight = homeContents.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  homeContents.style.opacity = 1 - window.scrollY / homeHeight;
-})
-
-// functions
 function scollIntoView(selector){
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
+
+
+// home contents is faded out when scroll down
+const homeContents = document.querySelector('#home');
+const homeHeight = homeContents.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  if(window.scrollY > homeHeight){
+    homeContents.classList.add('')
+  }
+})

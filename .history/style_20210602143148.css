@@ -166,8 +166,8 @@ button {
 }
 
 .home__fadeOut {
-  opacity: 0.5;
-  transition: all calc(var(--animation-duration)) ease-in-out;
+  background: url("imgs/background\ Img.png") center/cover no-repeat;
+  opacity: 0;
 }
 
 .home__avatar {

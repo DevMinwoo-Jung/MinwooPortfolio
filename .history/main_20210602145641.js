@@ -37,18 +37,20 @@ contactMe.addEventListener('click', () => {
   scollIntoView('#contact');
 });
 
-
-
-
-// home contents is faded out when scroll down
-const homeContents = document.querySelector('.home__container');
-const homeHeight = homeContents.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  homeContents.style.opacity = 1 - window.scrollY / homeHeight;
-})
-
-// functions
 function scollIntoView(selector){
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
+
+
+// home contents is faded out when scroll down
+const homeContents = document.querySelector('#home');
+const homeHeight = homeContents.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  if(window.scrollY){
+    homeContents.classList.add('home__fadeOut');
+    console.log("여기요");
+  } else {
+    homeContents.classList.remove('home__fadeOut');
+  }
+})

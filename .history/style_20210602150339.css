@@ -166,6 +166,7 @@ button {
 }
 
 .home__fadeOut {
+  background: url("imgs/background\ Img.png") center/cover no-repeat;
   opacity: 0.5;
   transition: all calc(var(--animation-duration)) ease-in-out;
 }

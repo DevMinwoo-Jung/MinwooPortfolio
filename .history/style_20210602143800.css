@@ -167,7 +167,12 @@ button {
 
 .home__fadeOut {
   opacity: 0.5;
-  transition: all calc(var(--animation-duration)) ease-in-out;
+  transition: all calc(var(--animation-duration) * 2) ease;
+}
+
+.home__home__fadeOutMore {
+  opacity: 0.9;
+  transition: all calc(var(--animation-duration) * 2) ease;
 }
 
 .home__avatar {

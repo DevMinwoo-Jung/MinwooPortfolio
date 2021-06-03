@@ -498,20 +498,14 @@ button {
   top: 90%;
   left: 90%;
   position: fixed;
-  font-size: 40px;
+  font-size: 60px;
   color: var(--color-white);
   background-color: purple;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--animation-duration) ease-in;
 }
 
-.home__btn--visible {
-  opacity: 1;
-  pointer-events: auto;
+.home__arrowBtn--hide {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

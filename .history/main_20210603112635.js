@@ -38,6 +38,8 @@ contactMe.addEventListener('click', () => {
 });
 
 
+
+
 // home contents is faded out when scroll down
 const homeContents = document.querySelector('.home__container');
 const homeHeight = homeContents.getBoundingClientRect().height;
@@ -50,16 +52,9 @@ document.addEventListener('scroll', () => {
 const arrowBtn = document.querySelector('.home__btn');
 document.addEventListener('scroll', () => {
   if(window.scrollY > homeHeight){
-    arrowBtn.classList.add('home__btn--visible');
-  } else {
-    arrowBtn.classList.add('home__btn--visible');
+    arrowBtn.removeAttribute("display");
   }
-});
-
-// go to home when click arrow button
-document.addEventListener('click', () => {
-  scollIntoView('#home');
-});
+})
 
 // functions
 function scollIntoView(selector){

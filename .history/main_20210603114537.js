@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
   if(window.scrollY > navbar){
     navbar.classList.add('navbar--dark');
   } else {
-    document.getElementById('navbar').style.backgroundColor = 'purple'
+    document.getElementById('navbar').style.backgroundColor = 'yellow'
     navbar.classList.remove('navbar--dark');
   }
 });
@@ -50,16 +50,11 @@ document.addEventListener('scroll', () => {
 const arrowBtn = document.querySelector('.home__btn');
 document.addEventListener('scroll', () => {
   if(window.scrollY > homeHeight){
-    arrowBtn.classList.add('home__btn--visible');
+    document.getElementById('home__arrowBtn').style.display = "";
   } else {
-    arrowBtn.classList.add('home__btn--visible');
+    
   }
-});
-
-// go to home when click arrow button
-document.addEventListener('click', () => {
-  scollIntoView('#home');
-});
+})
 
 // functions
 function scollIntoView(selector){

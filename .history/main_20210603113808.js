@@ -50,16 +50,11 @@ document.addEventListener('scroll', () => {
 const arrowBtn = document.querySelector('.home__btn');
 document.addEventListener('scroll', () => {
   if(window.scrollY > homeHeight){
-    arrowBtn.classList.add('home__btn--visible');
+    document.getElementById('home__arrowBtn').style.display = '';
   } else {
-    arrowBtn.classList.add('home__btn--visible');
+    document.getElementById('home__arrowBtn').style.display = 'none';
   }
-});
-
-// go to home when click arrow button
-document.addEventListener('click', () => {
-  scollIntoView('#home');
-});
+})
 
 // functions
 function scollIntoView(selector){

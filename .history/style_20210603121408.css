@@ -509,9 +509,8 @@ button {
   transition: opacity var(--animation-duration) ease-in;
 }
 
-.home__btn--visible {
+.home__arrowBtn--visible {
   opacity: 1;
-  pointer-events: auto;
 }
 
 @media screen and (max-width: 768px) {

@@ -50,9 +50,9 @@ document.addEventListener('scroll', () => {
 const arrowBtn = document.querySelector('.home__btn');
 document.addEventListener('scroll', () => {
   if(window.scrollY > homeHeight){
-    arrowBtn.classList.add('home__btn--visible');
+    arrowBtn.classList.remove('home__arrowBtn--hide');
   } else {
-    arrowBtn.classList.add('home__btn--visible');
+    arrowBtn.classList.add('home__arrowBtn--hide');
   }
 });
 

@@ -72,13 +72,12 @@ projectsCategories.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
-  };
+  }
 
 // Remove selection from the previous item and select the new
-const active = document.querySelector('.category__btn.selected');
+const active = document.querySelector('.actegory__btn.selected');
 active.classList.remove('selected');
-const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-target.classList.add('selected');
+e.target.classList.add('selected');
 
 project.classList.add('anim-out');
 setTimeout(() => {

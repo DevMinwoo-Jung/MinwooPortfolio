@@ -75,7 +75,7 @@ projectsCategories.addEventListener('click', (e) => {
   };
 
 // Remove selection from the previous item and select the new
-const active = document.querySelector('.category__btn.selected');
+const active = document.querySelector('.category__btnselected');
 active.classList.remove('selected');
 const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
 target.classList.add('selected');

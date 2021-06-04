@@ -72,14 +72,7 @@ projectsCategories.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
-  };
-
-// Remove selection from the previous item and select the new
-const active = document.querySelector('.category__btn.selected');
-active.classList.remove('selected');
-const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-target.classList.add('selected');
-
+  }
 project.classList.add('anim-out');
 setTimeout(() => {
   projects.forEach((project) => {
@@ -93,6 +86,13 @@ setTimeout(() => {
   }, 300);
 });
 
+// change work button state
+const categoryBtn = document.querySelectorAll('.category__btn');
+const categoryBtnOne = document.querySelector('.category__btn');
+
+projectsCategories.addEventListener('click', () => {
+  console.log(projectsCategories.childNodes);
+});
 
 
 // functions

@@ -70,22 +70,8 @@ const projects = document.querySelectorAll('.project');
 
 projectsCategories.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-project.classList.add('anim-out');
-setTimeout(() => {
-  projects.forEach((project) => {
-    if(filter === '*' || filter === project.dataset.type){
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-  project.classList.remove('anim-out');
-  }, 300);
+  console.log(filter);
 });
-
 // functions
 function scollIntoView(selector){
   const scrollTo = document.querySelector(selector);

@@ -27,8 +27,6 @@ navbarMenu.addEventListener('click', (event) => {
   if(link == null){
     return;
   }
-  console.log(link);
-  console.log(target);
   scollIntoView(link);
 });
 
@@ -63,27 +61,14 @@ arrowBtn.addEventListener('click', () => {
   scollIntoView('#home');
 });
 
-// show projects
-const projectsCategories = document.querySelector('.work__categories');
-const project = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-
-projectsCategories.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-project.classList.add('anim-out');
-setTimeout(() => {
-  projects.forEach((project) => {
-    if(filter === '*' || filter === project.dataset.type){
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-  project.classList.remove('anim-out');
-  }, 300);
+// show project 
+const projects = document.querySelector('.work__categories');
+projects.addEventListener('click', (project) => {
+  const kind = project.target;
+  const x = kind.dataset;
+  console.log(`kink = ${kind}`);
+  console.log(`x = ${x}`);
+  alert("이거안탐?");
 });
 
 // functions

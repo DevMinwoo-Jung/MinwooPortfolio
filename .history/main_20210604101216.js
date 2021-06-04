@@ -65,7 +65,7 @@ arrowBtn.addEventListener('click', () => {
 
 // show projects
 const projectsCategories = document.querySelector('.work__categories');
-const project = document.querySelector('.work__projects');
+const project1 = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 
 projectsCategories.addEventListener('click', (e) => {
@@ -73,17 +73,14 @@ projectsCategories.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-project.classList.add('anim-out');
-setTimeout(() => {
+  console.log(filter);
   projects.forEach((project) => {
     if(filter === '*' || filter === project.dataset.type){
       project.classList.remove('invisible');
     } else {
       project.classList.add('invisible');
-    }
+    };
   });
-  project.classList.remove('anim-out');
-  }, 300);
 });
 
 // functions

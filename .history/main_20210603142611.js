@@ -28,7 +28,6 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   console.log(link);
-  console.log(target);
   scollIntoView(link);
 });
 
@@ -63,27 +62,19 @@ arrowBtn.addEventListener('click', () => {
   scollIntoView('#home');
 });
 
-// show projects
-const projectsCategories = document.querySelector('.work__categories');
-const project = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-
-projectsCategories.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
+// show project 
+const projects = document.querySelector('.work__categories');
+const project = document.querySelector('category__btn').dataset.link;
+projects.addEventListener('click', (project) => {
+  const kind = project.target;
+  const x = kind.dataset.link;
+  // link는 html에서 data-link 부분에서 link
+  console.log(kind);
+  console.log(x);
+  console.log(project);
+  if(kind == project){
+    alert("같음!");
   }
-project.classList.add('anim-out');
-setTimeout(() => {
-  projects.forEach((project) => {
-    if(filter === '*' || filter === project.dataset.type){
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-  project.classList.remove('anim-out');
-  }, 300);
 });
 
 // functions

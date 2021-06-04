@@ -63,27 +63,20 @@ arrowBtn.addEventListener('click', () => {
   scollIntoView('#home');
 });
 
-// show projects
-const projectsCategories = document.querySelector('.work__categories');
-const project = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-
-projectsCategories.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-project.classList.add('anim-out');
-setTimeout(() => {
-  projects.forEach((project) => {
-    if(filter === '*' || filter === project.dataset.type){
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-  project.classList.remove('anim-out');
-  }, 300);
+// show project 
+const projects = document.querySelector('.work__categories');
+const project = document.querySelector('.category__btn');
+projects.addEventListener('click', (project) => {
+  const kinds = project.target;
+  const x = kinds.dataset.link;
+  const kind = project.target;
+  const y = kind.dataset.link;
+  // link는 html에서 data-link 부분에서 link
+  console.log(kind);
+  console.log(x);
+  if(kind == project){
+    alert("같음!");
+  };
 });
 
 // functions

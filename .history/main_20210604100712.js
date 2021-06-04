@@ -73,19 +73,15 @@ projectsCategories.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-project.classList.add('anim-out');
-setTimeout(() => {
+
   projects.forEach((project) => {
     if(filter === '*' || filter === project.dataset.type){
       project.classList.remove('invisible');
     } else {
       project.classList.add('invisible');
-    }
+    };
   });
-  project.classList.remove('anim-out');
-  }, 300);
 });
-
 // functions
 function scollIntoView(selector){
   const scrollTo = document.querySelector(selector);

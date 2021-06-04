@@ -371,13 +371,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  opacity: 1;
-  transition: all var(--animation-duration) ease-out;
-}
-
-.work__projects.anim-out {
-  opacity: 0;
-  transform: scale(0.9) translateY(40px);
 }
 
 .project {
@@ -410,10 +403,6 @@ button {
   transition: all var(--animation-duration) ease-in;
   transform: translateY(10px);
   background-color: black;
-}
-
-.project.invisible {
-  display: none;
 }
 
 .project:hover .project__description {
@@ -551,6 +540,16 @@ button {
 
   .skillset {
     flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+    opacity: 0;
+  }
+
+  .project.invisible {
+    display: none;
+    transition: all var(--animation-duration) ease-in;
   }
 
   .testimonail__avatar {

@@ -55,9 +55,7 @@ document.addEventListener('scroll', () => {
     arrowBtn.classList.add('home__btn--visible');
   } else {
     arrowBtn.classList.remove('home__btn--visible');
-  };
-  navbarMenu.classList.remove('show');
-  navbarMenu.childNodes[1].classList.remove('show');
+  }
 });
 
 // go to home when click arrow button
@@ -99,9 +97,10 @@ setTimeout(() => {
 // show menu when click navbar menu
 const navbarBtn = document.querySelector('.navbar__toggle-btn');
 navbarBtn.addEventListener('click', () => {
-  console.log(navbarMenu.childNodes[1]);
-  navbarMenu.classList.toggle('show');
-  navbarMenu.childNodes[1].classList.toggle('show');
+const navbarMenu = document.querySelector('.navbar__menu');  
+  console.log(navbarMenu);
+  // navbarMenu.classList.remove('navbar_-menu');
+  // navbarMenu.classList.add('navbar__menu--show');
 });
 
 

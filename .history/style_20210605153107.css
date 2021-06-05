@@ -430,7 +430,6 @@ button {
   left: 50%;
   margin-left: -12px;
   background-color: var(--color-dark-white);
-  transform: translateX(-50%);
 }
 
 /* Testimonial */

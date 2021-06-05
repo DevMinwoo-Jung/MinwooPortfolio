@@ -418,7 +418,7 @@ button {
 }
 
 .project__description h3 {
-  color: var(--color-orange);
+  color: var(--color-white);
 }
 
 .project__description h3:after {
@@ -430,7 +430,6 @@ button {
   left: 50%;
   margin-left: -12px;
   background-color: var(--color-dark-white);
-  transform: translateX(-50%);
 }
 
 /* Testimonial */
@@ -540,7 +539,7 @@ button {
     transition: all var(--animation-duration) ease-in;
   }
 
-  .navbar__menu.show {
+  .navbar__menu--show {
     flex-direction: column;
     text-align: center;
     width: 100%;

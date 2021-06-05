@@ -56,8 +56,8 @@ document.addEventListener('scroll', () => {
   } else {
     arrowBtn.classList.remove('home__btn--visible');
   };
-  navbarMenu.classList.remove('show');
-  navbarMenu.childNodes[1].classList.remove('show');
+  navbarMenu.classList.remove('navbar__menu--show');
+  navbarMenu.childNodes[1].classList.remove('navbar__menu--show');
 });
 
 // go to home when click arrow button

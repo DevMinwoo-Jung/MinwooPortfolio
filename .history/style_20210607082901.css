@@ -576,7 +576,6 @@ button {
 
   .category__btn {
     margin: 4px 0;
-    width: 90%;
   }
 
   .skillset {
@@ -595,7 +594,6 @@ button {
 
   .section {
     padding: 18px;
-    padding-top: 40px;
   }
 
   .testimonial__avatar:nth-child(odd),

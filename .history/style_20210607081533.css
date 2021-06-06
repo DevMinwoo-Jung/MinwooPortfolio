@@ -338,7 +338,6 @@ button {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
-  position: relative;
 }
 
 .category__btn.selected,
@@ -363,10 +362,9 @@ button {
   line-height: 24px;
   position: relative;
   top: -20px;
-  right: 16px;
+  left: 4px;
   opacity: 0;
   transition: all var(--animation-duration);
-  position: absolute;
 }
 
 .work__projects {
@@ -575,8 +573,7 @@ button {
   }
 
   .category__btn {
-    margin: 4px 0;
-    width: 90%;
+    padding: 8px;
   }
 
   .skillset {
@@ -588,36 +585,7 @@ button {
     height: 80px;
   }
 
-  .testimonial {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .section {
     padding: 18px;
-    padding-top: 40px;
-  }
-
-  .testimonial__avatar:nth-child(odd),
-  .testimonial__avatar:nth-child(even) {
-    margin: 0;
-    margin-bottom: 8px;
-  }
-  .testimonail__speech-bubble {
-    order: 1;
-  }
-
-  .home__btn {
-    font-size: 30px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-  }
-
-  .navbar__toggle-btn {
-    display: block;
-    top: 16px;
-    right: 16px;
-    font-size: var(--font-medium);
   }
 }

@@ -164,5 +164,5 @@ window.addEventListener('wheel', () => {
 function scollIntoView(selector){
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth'});
-  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+  selectNavItem(navItmes[sectionIds.indexOf(selector)]);
 }

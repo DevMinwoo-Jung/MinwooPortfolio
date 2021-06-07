@@ -30,7 +30,7 @@ navbarMenu.addEventListener('click', (event) => {
   console.log(link);
   console.log(target);
   scollIntoView(link);
-
+  selectNavItem(target);
 });
 
 
@@ -106,7 +106,11 @@ navbarBtn.addEventListener('click', () => {
 });
 
 
-
+// functions
+function scollIntoView(selector){
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth'});
+}
 
 // 1. 모든 섹션 요소들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
@@ -159,10 +163,3 @@ window.addEventListener('wheel', () => {
   }
   selectNavItem(navItems[selectedNavIndex]);
 });
-
-// functions
-function scollIntoView(selector){
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth'});
-  selectNavItem(navItems[sectionIds.indexOf(selector)]);
-}
